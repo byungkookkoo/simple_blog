@@ -1,0 +1,10 @@
+### Intellij ###
+
+# for intellij module composition
+*.iml
+
+# for intellij project settings
+Proj/.idea/
+
+# built project files
+Proj/target/

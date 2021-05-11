@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app>
+    <security-role>
+        <description></description>
+        <role-name>admin</role-name>
+    </security-role>
+    <security-constraint>
+        <display-name>My Blog</display-name>
+        <web-resource-collection>
+            <web-resource-name>My Blog</web-resource-name>
+            <description></description>
+            <url-pattern>/ByoungKookKoo/post.jsp</url-pattern>
+        </web-resource-collection>
+        <auth-constraint>
+            <description>Administrator</description>
+            <role-name>admin</role-name>
+        </auth-constraint>
+    </security-constraint>
+    <login-config>
+        <auth-method>FORM</auth-method>
+        <form-login-config>
+            <form-login-page>/ByoungKookKoo/login.jsp</form-login-page>
+            <form-error-page>/ByoungKookKoo/login_failed.jsp</form-error-page>
+        </form-login-config>
+    </login-config>
+    <error-page>
+        <error-code>404</error-code>
+        <location>/ByoungKookKoo/404.jsp</location>
+    </error-page>
+</web-app>
